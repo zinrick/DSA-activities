@@ -11,7 +11,7 @@ void push(char val) {
 }
 
 char pop() {
-   stackOutput.erase(top, 1); // Adjusted to erase the last char
+   stackOutput.erase(top, 1); 
     char val = stack[top--];
     return val;
 }
@@ -45,7 +45,7 @@ void convertToPostfix(string input) {
                     output += pop();
                 }
                 if (top >= 0 && peek() == '(') {
-                    pop(); // remove the '('
+                    pop();
                 }
             } else {
                 while (top >= 0 && checkLevel(peek()) <= checkLevel(input[i])) {
